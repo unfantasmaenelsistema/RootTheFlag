@@ -1,0 +1,62 @@
+const I18N = {
+  es: {
+    title: 'RootTheFlag — Chuletas y herramientas para retos CTF',
+    brandSub: 'UN FANTASMA EN EL SISTEMA',
+    lang: 'EN', themeLight: '☀ CLARO', themeDark: '☾ OSCURO',
+    heroText: 'Tres guías de consulta rápida para resolver retos CTF de criptografía, esteganografía y cifrados de símbolos, y una caja de herramientas para decodificar sin salir del navegador.',
+    statGuides: 'guías', statPages: 'páginas', statTopics: 'temas indexados', statOps: 'decodificadores',
+    goGuides: '📚 Guías', goSearch: '🔎 Buscar tema', goTools: '🧰 Herramientas',
+    hGuides: '// GUÍAS //', subGuides: 'En PDF, en español. Los temas de cada guía abren el PDF directamente en su página.',
+    open: '▶ Abrir', download: '⬇ Descargar', pages: (n, mb) => `${n} páginas · ${mb} MB`,
+    hSearch: '// BUSCAR UN TEMA //', subSearch: 'Escribe un cifrado, una técnica o una herramienta (p. ej. «vigenere», «lsb», «pigpen», «dtmf»).',
+    searchPh: 'Buscar en las tres guías…', noResults: 'Sin resultados. Prueba con otro nombre (en español o en inglés).',
+    page: (p) => `pág. ${p}`,
+    hTools: '// CAJA DE HERRAMIENTAS //', subTools: 'Todo se calcula en tu navegador: nada sale de tu equipo. Cada herramienta enlaza a la página de la guía que la explica.',
+    input: 'ENTRADA', output: 'SALIDA', suggest: 'Parece:', none: '—', key: 'Clave:', keyPh: 'p. ej. LEMON',
+    copy: 'Copiar', copied: '¡Copiado!', useAsInput: '↺ Usar como entrada', guideRef: (g, p) => `📖 ${g}, pág. ${p}`,
+    pick: 'Elige una operación.', error: 'No se ha podido decodificar: revisa que la entrada tenga el formato correcto.',
+    needKey: 'Esta operación necesita una clave.',
+    hErrata: '// ENLACES REVISADOS //',
+    errataSummary: (n) => `${n} enlaces de los PDF estaban rotos y se han corregido (15/10/2026). Ver el detalle.`,
+    errataNote: 'Donde el PDF muestra la URL impresa (marcado con ⚠), el texto sigue siendo el antiguo, pero al pulsarlo ya lleva a la dirección nueva.',
+    thGuide: 'Guía', thPage: 'Pág.', thLink: 'Enlace', thWhy: 'Motivo', thOld: 'Antes', thNew: 'Ahora',
+    footer: 'Material educativo para CTF y laboratorios propios. Úsalo solo en entornos autorizados.',
+    source: 'Código fuente',
+    ops: {
+      'b64d': 'Base64 → texto', 'b64e': 'Texto → Base64', 'b32': 'Base32 → texto', 'hex': 'Hex → texto', 'hexe': 'Texto → hex',
+      'bin': 'Binario → texto', 'rot13': 'ROT13', 'rot47': 'ROT47', 'caesar': 'César (las 25)', 'atbash': 'Atbash',
+      'vigd': 'Vigenère descifrar', 'vige': 'Vigenère cifrar', 'xor': 'XOR 1 byte (fuerza bruta)', 'morse-d': 'Morse → texto',
+      'morse-e': 'Texto → Morse', 'rail': 'Rail Fence (2-10)', 'a1z26': 'A1Z26 (1=A)', 'url': 'URL decode', 'rev': 'Invertir texto'
+    }
+  },
+  en: {
+    title: 'RootTheFlag — CTF cheat sheets and tools',
+    brandSub: 'A GHOST IN THE SYSTEM',
+    lang: 'ES', themeLight: '☀ LIGHT', themeDark: '☾ DARK',
+    heroText: 'Three quick-reference guides for solving CTF cryptography, steganography and symbol-cipher challenges, plus a toolbox to decode without leaving your browser.',
+    statGuides: 'guides', statPages: 'pages', statTopics: 'indexed topics', statOps: 'decoders',
+    goGuides: '📚 Guides', goSearch: '🔎 Find a topic', goTools: '🧰 Tools',
+    hGuides: '// GUIDES //', subGuides: 'PDF, written in Spanish. Each guide\'s topics open the PDF right on its page.',
+    open: '▶ Open', download: '⬇ Download', pages: (n, mb) => `${n} pages · ${mb} MB`,
+    hSearch: '// FIND A TOPIC //', subSearch: 'Type a cipher, a technique or a tool (e.g. «vigenere», «lsb», «pigpen», «dtmf»).',
+    searchPh: 'Search all three guides…', noResults: 'No results. Try another name (Spanish or English).',
+    page: (p) => `p. ${p}`,
+    hTools: '// TOOLBOX //', subTools: 'Everything runs in your browser: nothing leaves your machine. Each tool links to the guide page that explains it.',
+    input: 'INPUT', output: 'OUTPUT', suggest: 'Looks like:', none: '—', key: 'Key:', keyPh: 'e.g. LEMON',
+    copy: 'Copy', copied: 'Copied!', useAsInput: '↺ Use as input', guideRef: (g, p) => `📖 ${g}, p. ${p}`,
+    pick: 'Pick an operation.', error: 'Could not decode: check the input is in the right format.',
+    needKey: 'This operation needs a key.',
+    hErrata: '// REVIEWED LINKS //',
+    errataSummary: (n) => `${n} links in the PDFs were broken and have been fixed (2026-10-15). See details.`,
+    errataNote: 'Where the PDF prints the URL itself (marked ⚠), the text still shows the old one, but clicking it now goes to the new address.',
+    thGuide: 'Guide', thPage: 'Page', thLink: 'Link', thWhy: 'Reason', thOld: 'Before', thNew: 'Now',
+    footer: 'Educational material for CTFs and your own labs. Use it only in authorised environments.',
+    source: 'Source code',
+    ops: {
+      'b64d': 'Base64 → text', 'b64e': 'Text → Base64', 'b32': 'Base32 → text', 'hex': 'Hex → text', 'hexe': 'Text → hex',
+      'bin': 'Binary → text', 'rot13': 'ROT13', 'rot47': 'ROT47', 'caesar': 'Caesar (all 25)', 'atbash': 'Atbash',
+      'vigd': 'Vigenère decrypt', 'vige': 'Vigenère encrypt', 'xor': 'Single-byte XOR (brute force)', 'morse-d': 'Morse → text',
+      'morse-e': 'Text → Morse', 'rail': 'Rail Fence (2-10)', 'a1z26': 'A1Z26 (1=A)', 'url': 'URL decode', 'rev': 'Reverse text'
+    }
+  }
+};
