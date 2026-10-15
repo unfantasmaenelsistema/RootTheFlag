@@ -41,4 +41,27 @@ Para probar en local: `python -m http.server` y abrir `http://localhost:8000`.
 
 ## Licencia / License
 
-El código de la web tiene licencia [MIT](LICENSE). Las guías en PDF son obra de Un Fantasma en el Sistema.
+Este repositorio tiene **dos licencias**, una para el código y otra para las guías:
+
+| Qué | Licencia | Fichero |
+|---|---|---|
+| Código de la web (`index.html`, `css/`, `js/`) | [MIT](https://opensource.org/license/mit) | [`LICENSE`](LICENSE) |
+| Guías en PDF (`pdf/`) y sus portadas (`img/`) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es) | [`pdf/LICENSE-CC-BY-NC-SA-4.0.txt`](pdf/LICENSE-CC-BY-NC-SA-4.0.txt) |
+
+### Qué permite la licencia de las guías
+
+[![CC BY-NC-SA 4.0](https://img.shields.io/badge/licencia-CC_BY--NC--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)
+
+Puedes **compartir** las guías (copiarlas y redistribuirlas en cualquier medio o formato) y **adaptarlas** (remezclarlas, transformarlas y crear a partir de ellas), por ejemplo para usarlas en clase o en un club de CTF, siempre que cumplas estas condiciones:
+
+- **BY — Reconocimiento:** cita la autoría («Un Fantasma en el Sistema»), enlaza a la licencia e indica si has hecho cambios.
+- **NC — No comercial:** no puedes usarlas con fines comerciales, como venderlas o incluirlas en un curso de pago.
+- **SA — Compartir igual:** si las adaptas, tienes que publicar tu versión con esta misma licencia.
+
+Ejemplo de atribución:
+
+> «Criptografía en retos CTF», de Un Fantasma en el Sistema (https://github.com/unfantasmaenelsistema/RootTheFlag), bajo licencia CC BY-NC-SA 4.0.
+
+La licencia también va grabada en los metadatos de cada PDF (campos *Asunto* y *Palabras clave*). El texto legal completo es el oficial de Creative Commons, en inglés. Para usos que queden fuera de la licencia, por ejemplo comerciales, escribe a contacto@unfantasmaenelsistema.com.
+
+*English:* the website code is MIT-licensed; the PDF guides and their covers are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): share and adapt them with attribution, for non-commercial purposes, under the same license.
