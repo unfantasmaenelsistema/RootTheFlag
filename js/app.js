@@ -49,6 +49,7 @@ function applyTexts() {
   document.querySelectorAll('[data-t]').forEach(el => { el.textContent = T()[el.dataset.t]; });
   document.querySelectorAll('[data-tp]').forEach(el => { el.placeholder = T()[el.dataset.tp]; });
   $('langBtn').textContent = T().lang;
+  $('licLink').href = T().licUrl;
   applyTheme(document.documentElement.getAttribute('data-theme'));
 }
 
@@ -67,7 +68,7 @@ function renderGuides() {
       <a href="${g.file}" target="_blank" rel="noopener"><img class="cover" src="${g.cover}" alt="${esc(tr(g.title))}" loading="lazy" width="372" height="526"></a>
       <div class="body">
         <h3>${esc(tr(g.title))}</h3>
-        <div class="meta">${T().pages(g.pages, SIZES[g.id])} · PDF ES</div>
+        <div class="meta">${T().pages(g.pages, SIZES[g.id])} · PDF ES · <a href="${T().licUrl}" target="_blank" rel="noopener license">CC BY-NC-SA 4.0</a></div>
         <p>${esc(tr(g.desc))}</p>
         <div class="topics">${g.topics.map(([t, p]) => `<a class="tag" href="${pageUrl(g, p)}" target="_blank" rel="noopener" title="${T().page(p)}">${esc(t)}</a>`).join('')}</div>
         <div class="actions">

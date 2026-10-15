@@ -21,6 +21,8 @@ const I18N = {
     errataNote: 'Donde el PDF muestra la URL impresa (marcado con ⚠), el texto sigue siendo el antiguo, pero al pulsarlo ya lleva a la dirección nueva.',
     thGuide: 'Guía', thPage: 'Pág.', thLink: 'Enlace', thWhy: 'Motivo', thOld: 'Antes', thNew: 'Ahora',
     footer: 'Material educativo para CTF y laboratorios propios. Úsalo solo en entornos autorizados.',
+    licUrl: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es',
+    licNote: 'Guías en PDF: CC BY-NC-SA 4.0 (compártelas y adáptalas citando la autoría, sin uso comercial y con la misma licencia). Código: MIT.',
     source: 'Código fuente',
     ops: {
       'b64d': 'Base64 → texto', 'b64e': 'Texto → Base64', 'b32': 'Base32 → texto', 'hex': 'Hex → texto', 'hexe': 'Texto → hex',
@@ -51,6 +53,8 @@ const I18N = {
     errataNote: 'Where the PDF prints the URL itself (marked ⚠), the text still shows the old one, but clicking it now goes to the new address.',
     thGuide: 'Guide', thPage: 'Page', thLink: 'Link', thWhy: 'Reason', thOld: 'Before', thNew: 'Now',
     footer: 'Educational material for CTFs and your own labs. Use it only in authorised environments.',
+    licUrl: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en',
+    licNote: 'PDF guides: CC BY-NC-SA 4.0 (share and adapt them with attribution, non-commercially, under the same license). Code: MIT.',
     source: 'Source code',
     ops: {
       'b64d': 'Base64 → text', 'b64e': 'Text → Base64', 'b32': 'Base32 → text', 'hex': 'Hex → text', 'hexe': 'Text → hex',
