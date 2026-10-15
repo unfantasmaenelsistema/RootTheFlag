@@ -1,81 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PwnBuilder - CheatSheets para Retos CTF</title>
-    <style>
-        /* Estilos generales y fondo oscuro */
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-
-        /* Contenedor principal */
-        .container {
-            background-color: #1e1e1e;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
-            width: 90%;
-            text-align: center;
-        }
-
-        h1 {
-            color: #00ff88;
-            border-bottom: 2px solid #00ff88;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo de la lista de documentos */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 15px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #e0e0e0;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border: 1px solid #00ff88;
-            border-radius: 5px;
-            display: block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        a:hover {
-            background-color: #00ff88;
-            color: #121212;
-            transform: scale(1.05);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RootTheFlag — Chuletas y herramientas para retos CTF</title>
+<meta name="description" content="Guías de consulta rápida para retos CTF de criptografía, esteganografía y cifrados de símbolos, con buscador de temas y caja de herramientas de decodificación en el navegador.">
+<meta property="og:title" content="RootTheFlag — Un Fantasma en el Sistema">
+<meta property="og:description" content="Chuletas CTF (criptografía, esteganografía, symbol ciphers) y decodificadores en el navegador.">
+<meta property="og:image" content="https://unfantasmaenelsistema.github.io/RootTheFlag/img/criptografia.jpg">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    var t = null; try { t = localStorage.getItem('rtf_theme'); } catch (e) {}
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
 </head>
 <body>
+<div class="wrap">
 
-    <div class="container">
-        <h1>CheatSheets para Retos CTF 💻</h1>
-        <ul>
-            <li><a href="Criptografía.pdf">Criptografía</a></li>
-            <li><a href="Esteganografia.pdf">Esteganografia</a></li>
-            <li><a href="Symbol Ciphers.pdf">Symbol Ciphers</a></li>
-        </ul>
+  <header class="top">
+    <a class="brand" href="https://www.unfantasmaenelsistema.com" target="_blank" rel="noopener">
+      <img src="icono.png" alt="Un Fantasma en el Sistema" width="44" height="44">
+      <span><b>ROOT<span>THE</span>FLAG</b><small data-t="brandSub">UN FANTASMA EN EL SISTEMA</small></span>
+    </a>
+    <nav class="controls">
+      <a class="chip" href="https://www.unfantasmaenelsistema.com" target="_blank" rel="noopener">[ WEB ]</a>
+      <a class="chip" href="https://ghostore.unfantasmaenelsistema.com/" target="_blank" rel="noopener">[ GHOSTORE ]</a>
+      <button class="chip" id="langBtn" type="button">EN</button>
+      <button class="chip" id="themeBtn" type="button">☀</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>ROOT<span>THE</span>FLAG</h1>
+    <p data-t="heroText"></p>
+    <div class="stats" id="stats"></div>
+    <div class="jump">
+      <a class="chip" href="#guias" data-t="goGuides">📚 Guías</a>
+      <a class="chip" href="#buscar" data-t="goSearch">🔎 Buscar tema</a>
+      <a class="chip" href="#herramientas" data-t="goTools">🧰 Herramientas</a>
     </div>
+  </section>
 
+  <section class="block" id="guias">
+    <h2 data-t="hGuides">// GUÍAS //</h2>
+    <p class="sub" data-t="subGuides"></p>
+    <div class="guides" id="guides"></div>
+  </section>
+
+  <section class="block" id="buscar">
+    <h2 data-t="hSearch">// BUSCAR UN TEMA //</h2>
+    <p class="sub" data-t="subSearch"></p>
+    <input type="search" id="search" class="search" data-tp="searchPh" autocomplete="off" aria-label="Buscar tema">
+    <div class="results" id="results" aria-live="polite"></div>
+    <p class="empty" id="noResults" data-t="noResults" hidden></p>
+  </section>
+
+  <section class="block" id="herramientas">
+    <h2 data-t="hTools">// CAJA DE HERRAMIENTAS //</h2>
+    <p class="sub" data-t="subTools"></p>
+    <div class="toolbox">
+      <label for="input" data-t="input">ENTRADA</label>
+      <textarea id="input" spellcheck="false" placeholder="ZmxhZ3tyMDB0X3RoM19mbDRnfQ=="></textarea>
+      <div class="suggest" id="suggest"></div>
+      <div class="ops" id="ops"></div>
+      <div class="param" id="paramRow" hidden>
+        <label for="key" data-t="key">Clave:</label>
+        <input type="text" id="key" data-tp="keyPh" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="outhead">
+        <label for="output" data-t="output">SALIDA</label>
+        <span class="ref" id="ref"></span>
+      </div>
+      <pre class="out" id="output" aria-live="polite"></pre>
+      <div class="jump" style="justify-content:flex-start">
+        <button class="chip" id="copyBtn" type="button" data-t="copy">Copiar</button>
+        <button class="chip" id="chainBtn" type="button" data-t="useAsInput">↺ Usar como entrada</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="enlaces">
+    <h2 data-t="hErrata">// ENLACES REVISADOS //</h2>
+    <details class="errata">
+      <summary id="errataSummary"></summary>
+      <p class="sub" style="margin:10px 0 0" data-t="errataNote"></p>
+      <div class="table-wrap"><table id="errataTable"></table></div>
+    </details>
+  </section>
+
+  <footer>
+    <span data-t="footer"></span>
+    <span class="links">
+      <a href="https://www.unfantasmaenelsistema.com" target="_blank" rel="noopener">unfantasmaenelsistema.com</a>
+      <a href="https://ghostore.unfantasmaenelsistema.com/" target="_blank" rel="noopener">GhoStore</a>
+      <a href="https://github.com/unfantasmaenelsistema/RootTheFlag" target="_blank" rel="noopener" data-t="source">Código fuente</a>
+    </span>
+  </footer>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/topics.js"></script>
+<script src="js/errata.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/app.js"></script>
 </body>
-
 </html>
